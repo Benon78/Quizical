@@ -1,0 +1,235 @@
+*,::before,::after{
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: rgb(32, 32, 32);
+  padding: 30px 0;
+  font-size: 16px;
+  height: 100vh;
+}
+
+main{
+  background: #abc6d6;
+  background: linear-gradient(45deg, #DEEBF8 0%, rgba(242, 235, 235, 1) 45%, #FFFAD1 100%);
+  width: 60%;
+  max-width: 700px;
+  height: 700px;
+  min-height: 600px;
+  max-height: 100vh;
+  opacity: 1;
+  margin: 50px auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+main > div.loader{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+div.loader > p{
+  margin-top: 10px;
+  color: #4D5B9E;
+}
+
+div.start-screen{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 29px;
+  height: 100%;
+}
+
+div.start-screen > h2{
+  color: #293264;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 31.25px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+div.start-screen > p{
+  color: #293264;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 1em;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+}
+
+div.start-screen > button{
+  width: 193px;
+  height: 52px;
+  opacity: 1;
+  border-radius: 15px;
+  border: none;
+  cursor: pointer;
+  background-color: #4D5B9E;
+  color: #F5F7FB;
+  font-weight: 500;
+  font-size: 1em;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+}
+
+div.game-over-screen{
+  width: 100%;
+  padding: 39px 75px 25px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+div.game-over-screen > p {
+  font-weight: 700;
+  font-size: 1em;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+  color: #293264;
+}
+
+div.game-over-screen > button{
+  width: 104px;
+  height: 30px;
+  opacity: 1;
+  border-radius: 10px;
+  border: none;
+  background-color: #4D5B9E;
+  color: #F5F7FB;
+  font-weight: 600;
+  font-style: Semi Bold;
+  font-size: .9em;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+  cursor: pointer;
+}
+
+section.quiz-container {
+  width: 100%;
+  padding: 39px 75px 25px;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+}
+
+ .question{
+  width: 100%;
+  border-bottom: 2px solid #DBDEF0;
+  margin-bottom: 14px;
+}
+
+section.quiz-container > button{
+  width: 120px;
+  height: 35px;
+  opacity: 1;
+  border-radius: 10px;
+  border: none;
+  background-color: #4D5B9E;
+  font-weight: 600;
+  font-style: Semi Bold;
+  font-size: 10.24px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+  color: #F5F7FB;
+  cursor: pointer;
+  align-self: center;
+
+}
+
+section.quiz-container > button:disabled{
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.question h3{
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: #293264 ;
+  margin-bottom: 15px;
+}
+
+.question > .options{
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+  gap: 13px;
+  margin-bottom: 15px;
+}
+
+.options > label.option{
+  cursor: pointer;
+  opacity: 1;
+  border-radius: 7.94px;
+  padding: 5px;
+  border: 1px solid #4D5B9E;
+  display: flex;
+  align-items: center;
+}
+input[type='radio']{
+  display: none;
+}
+label.option > span{
+  width: 100%;
+  font-weight: 500;
+  font-size: .75em;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+  color: #293264;
+}
+
+label.option.selected{
+  background-color: #D6DBF5;
+}
+
+label.option.correct{
+  background-color: #94D7A2;
+}
+label.option.wrong{
+  background-color: #F8BCBC;
+  opacity: 0.5;
+}
+
+label.option.disabled{
+  opacity: 0.5;
+}
+
+/* div.score-board p{
+} */
+
+div.score-board > div.progress-bar{
+  width: 100%;
+  background: #ddd;
+  height: 8px;
+  border-radius: 4px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+div.score-board > div.progress-bar > div.progress{
+  height: 8px;
+  background: #349ac2;
+  background: linear-gradient(45deg, rgba(52, 154, 194, 1) 0%, rgba(43, 196, 107, 1) 50%, rgba(212, 197, 83, 1) 100%);
+  border-radius: 4px;
+  transition: background  1s ;
+}
+
+
