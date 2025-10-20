@@ -4,7 +4,7 @@ export const getQuestions = async() =>{
     const randIndex = Math.floor(Math.random() * difficulty.length) 
 
     try {
-        const resp = await fetch(`https://opentdb.com/api.php?amount=5&category=9&difficulty=${difficulty[randIndex]}&type=multiple`)
+        const resp = await fetch(`https://opentdb.com/api.php?amount=10&category=9&difficulty=${difficulty[randIndex]}&type=multiple`)
 
             if(!resp.ok){
                 if(resp.status === 429){
