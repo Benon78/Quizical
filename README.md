@@ -17,5 +17,5 @@ This project used deffent website and libraries,  also its a solo project from t
 - [`open trivai DB`](https://opentdb.com/api_config.php)
 
 ## Test the live preview
-- [Quizical] ()
+- [Quizical] (https://quzical.netlify.app/)
 

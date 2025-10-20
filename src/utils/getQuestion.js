@@ -1,5 +1,5 @@
-
-const getQuestions = async() =>{
+import he from 'he'
+export const getQuestions = async() =>{
     const difficulty = ['easy', 'medium', 'hard']
     const randIndex = Math.floor(Math.random() * difficulty.length) 
 
@@ -22,4 +22,20 @@ const getQuestions = async() =>{
     }
 }
 
-export default getQuestions;
+export const getDecodedQuestions = async() => {
+    try {
+         const data = await getQuestions()
+         const decoded = data.map(q => ({
+                question: he.decode(q.question),
+                correct_answer: he.decode(q.correct_answer),
+                options: [q.correct_answer, ...q.incorrect_answers]
+                          .map(opt => he.decode(opt))
+                          .sort(() => Math.random() - 0.5)
+              }))
+
+        return decoded
+    } catch (error) {
+        console.error(error)
+        return []
+    }
+}
