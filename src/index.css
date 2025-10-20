@@ -17,7 +17,7 @@ main{
   background: linear-gradient(45deg, #DEEBF8 0%, rgba(242, 235, 235, 1) 45%, #FFFAD1 100%);
   width: 60%;
   max-width: 700px;
-  height: 700px;
+  height: auto;
   min-height: 600px;
   max-height: 100vh;
   opacity: 1;
@@ -25,6 +25,7 @@ main{
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  padding-bottom: 20px;
 }
 
 main > div.loader{
@@ -32,7 +33,7 @@ main > div.loader{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100%;
+  height: 700px;
 }
 
 div.loader > p{
@@ -46,7 +47,7 @@ div.start-screen{
   align-items: center;
   justify-content: center;
   gap: 29px;
-  height: 100%;
+  height: 700px;
 }
 
 div.start-screen > h2{
